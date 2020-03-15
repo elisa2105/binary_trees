@@ -54,4 +54,7 @@ size_t biTreeD(const binary_tree_t *node);
 size_t biTreeH(const binary_tree_t *t);
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 void printL(const binary_tree_t *tree, void (*func)(int), size_t l);
+int binary_tree_is_complete(const binary_tree_t *tree);
+int complete(const binary_tree_t *tree, size_t i, size_t nnodes);
+size_t nodes(const binary_tree_t *t);
 #endif

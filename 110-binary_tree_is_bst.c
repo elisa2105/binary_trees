@@ -12,15 +12,13 @@ return (bst(tree, INT_MIN, INT_MAX));
 }
 
 /**
- * binary_tree_rotate_right - rotate node to right
+ * bst  - checks if it is a BST
  * @t: root
- * @l: min valie
- * @r: max value
+ * @min: min valie
+ * @max: max value
  * Return: pointer new root
  */
-int bst(const binary_tree_t *t,
-const int min,
-const int max)
+int bst(const binary_tree_t *t, int min, int max)
 {
 if (!t)
 return (1);

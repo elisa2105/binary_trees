@@ -8,7 +8,7 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 {
 if (!tree)
 return (0);
-return (bst(tree, NULL, NULL));
+return (bst(tree, INT_MIN, INT_MAX));
 }
 
 /**
@@ -19,12 +19,12 @@ return (bst(tree, NULL, NULL));
  * Return: pointer new root
  */
 int bst(const binary_tree_t *t,
-const binary_tree_t *l,
-const binary_tree_t *r)
+const int min,
+const int max)
 {
 if (!t)
 return (1);
-if (l && l->n >= t->n)
+if (t->n <= min || t->n >= max)
 return (0);
-return (bst(t->left, l, t) && bst(t->right, t, r));
+return (bst(t->left, min, t->n) && bst(t->right, t->n, max));
 }

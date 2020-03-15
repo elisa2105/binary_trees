@@ -26,10 +26,10 @@ size_t biTreeH(const binary_tree_t *t)
 {
 size_t l;
 size_t r;
-if (tree == NULL || (tree->left == NULL && tree->right == NULL))
+if (t == NULL || (t->left == NULL && t->right == NULL))
 return (0);
-l = biTreeH(tree->left);
-r = biTreeH(tree->right);
+l = biTreeH(t->left);
+r = biTreeH(t->right);
 if (l > r)
 return (l + 1);
 return (r + 1);
@@ -46,9 +46,9 @@ void printL(const binary_tree_t *tree, void (*func)(int), size_t l)
 {
 if (tree == NULL)
 return;
-if (level == 1)
-func(tree->n)
-else if (level > 1)
+if (l == 1)
+func(tree->n);
+else if (l > 1)
 {
 printL(tree->left, func, l - 1);
 printL(tree->right, func, l - 1);

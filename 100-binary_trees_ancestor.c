@@ -16,8 +16,8 @@ if (first == second)
 return ((binary_tree_t *)first);
 if (first->parent == second->parent)
 return (first->parent);
-r = binary_trees_ancestor(first->parent, second);
-l = binary_trees_ancestor(second->parent, first);
+l = binary_trees_ancestor(first->parent, second);
+r = binary_trees_ancestor(second->parent, first);
 if (biTreeD(first) > biTreeD(second))
 return (l);
 else if (biTreeD(second) > biTreeD(first))

@@ -59,4 +59,7 @@ int complete(const binary_tree_t *tree, size_t i, size_t nnodes);
 size_t nodes(const binary_tree_t *t);
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
+int binary_tree_is_bst(const binary_tree_t *tree);
+int bst(const binary_tree_t *t, const binary_tree_t *l,
+const binary_tree_t *r);
 #endif

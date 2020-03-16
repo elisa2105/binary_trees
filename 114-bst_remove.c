@@ -6,7 +6,7 @@
  * @value: value to delete
  * Return: pointer to new root
  */
-bst_t *bst_remove(bst_t *root, int value);
+bst_t *bst_remove(bst_t *root, int value)
 {
 if (root == NULL)
 return ((bst_t *)tree);
